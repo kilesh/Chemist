@@ -1,0 +1,285 @@
+@background: #F7EADC;
+@Sword: #4D3B36;
+@Bword: #F56A57;
+
+
+
+
+html, body {
+    width: auto;
+    overflow-x: hidden;
+    
+    background-color: @background;
+    
+}
+
+#first,#second,#cover,#third,#fourth,#fifth,#sixth,#seventh{
+//    background-color:#f56a57;
+    
+}
+.container-fluid { 
+    
+        
+    
+    .bang-row {
+        padding-top: 30px;
+        padding-bottom: 10px;
+        text-align: center;
+        .leftrow{
+            
+            text-align:left;
+        }
+        .rightrow{
+            
+            text-align:right;
+        }
+        .middlerow{
+            text-align: justify;
+        }
+        font-family: "Raleway";
+        
+        position: relative;
+//        padding-bottom:10px
+        background-color:@background;
+        color:@Sword;
+        border: 0;
+    
+    }
+    .cover-row {
+        
+        font-family: "Raleway";
+        color:#ffffff;
+        text-align: center;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-flex-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+//        background: url('http://i66.tinypic.com/261z0wg.jpg') 50% 100% no-repeat;
+        background: url('/image/DSC_0735.jpg') 50% 100% no-repeat;
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        position: relative;
+        height: 100vh;
+        z-index: 999;
+        
+    }
+    .last-row{
+        padding-bottom: 0px;
+        padding-top: 0px;
+        
+    }
+}
+.bang-row {
+    h1 {
+        color:@Bword;
+    }
+}
+
+.menu-button {
+    transition-duration:ease 1.5s;
+	
+    position:absolute;        
+	z-index: 1000;
+	//margin: 3em;
+   // padding: 0;
+    left:1em;
+    top:0.3em;
+	width: 5.25em;
+	height: 4.25em;
+	
+    &:before{
+        position:absolute;
+        top: 0.5em;
+        right: 0.5em;
+        bottom: 0.5em;
+        left: 0.5em;
+        
+        background: linear-gradient(#ffffff 20%, transparent 20%, transparent 40%, #ffffff      40%, #ffffff 60%, transparent 60%, transparent 80%, #ffffff 80%);
+        content:'';
+        
+    }
+    &:hover{
+       
+        opacity: 0.6;
+    }
+    
+}
+
+
+.arrow-left {
+    
+	position:absolute;
+          
+	z-index: 1000;
+	margin: 1.5em;
+    padding: 0;
+    left:0.2vw;
+    top:-3px;
+    
+//	width: 5.25em;
+//	height: 4.25em;
+    &.changed::before{border-right: 5px solid @Sword;
+        border-top: 5px solid @Sword;   
+        transition-duration: 0.5s;
+        
+    }
+    &.changed::after{border-right: 5px solid @Sword;
+        border-top: 5px solid @Sword;
+        transition-duration: 0.5s;
+        
+        
+    }
+    &::before{
+        position:absolute;
+        border-right: 5px solid #ffffff;
+        border-top: 5px solid #ffffff;
+        display: inline-block;
+        height:35px;
+        margin-left: 0px;
+       
+        
+        content:'';
+        -webkit-transform:rotate(-135deg);
+        -moz-transform:rotate(-135deg);
+        -ms-transform:rotate(-135deg);
+        -o-transform:rotate(-135deg);
+        transform:rotate(-135deg);
+        width:35px;
+        transition-duration: 0.5s;
+        
+    }
+    &::after{
+     
+//          margin-left: 14px;
+//          border-right: 5px solid #ffffff;
+//          content: ' ';
+//          height: 35px;
+//          width: 5px;
+//          background-color: #ffffff;
+        margin-top: 0px;
+        margin-left: 10px;
+        position:absolute;
+        border-right: 5px solid #ffffff;
+        
+        display: inline-block;
+        height:35px;
+        transition-duration: 0.5s;
+       
+        
+        content:'';
+        
+       
+    }
+    &:hover{
+        opacity: 0.6;
+        
+        
+        &:after{
+            margin-left: -10px;
+        }
+       
+    }
+    
+}
+
+
+
+
+.navbar{
+    border:0;
+    background-color:transparent;
+    min-height: 70px;
+    max-height: 70px;
+    transition-duration: 1s;
+    transition-delay: 0s;
+}
+.navbar-default .navbar-text {
+  color: #ffffff !important;
+}
+
+.navbar-brand,.navbar-brand:focus,.navbar-brand:visited,.navbar-brand:active{
+    position: fixed;
+    right:1vw;
+    font-family: "Raleway";
+    
+    padding-top: 25px;
+    height: 50px;
+    font-size: 25px;
+    color:#ffffff!important;
+   }
+
+.navbar-right{
+    
+    padding-top: 45px;
+    height: 50px;
+    font-size: 25px;
+}
+
+
+.badge {
+    background-color: transparent;
+    padding: 0;
+}
+
+.list-group-item {
+    background-color: transparent;
+    border: 0px ;
+    
+	
+}
+
+.list-group-item {
+	font-size: 20px;
+}
+
+
+//.tooltip-inner {
+//    min-width: 150px; 
+//    background-color: white;
+//    
+//    
+//.tooltip-arrow{
+//    border-bottom-color:#F00 !important;
+//}
+
+.tooltip-inner {
+    background-color: @Bword;
+    color: @Sword;
+    padding: 5px;
+    font-size: 1.5rem;
+    margin-left: 30px;
+    text-align:left;
+}
+
+.tooltip.top .tooltip-arrow {
+    border-top-color: @Bword;
+}
+
+.tooltip.right .tooltip-arrow {
+    border-right-color: @Bword;
+}
+
+.tooltip.bottom .tooltip-arrow {
+    border-bottom-color: @Bword;
+}
+
+.tooltip.left .tooltip-arrow {
+    border-left-color: @Bword;
+}
+
+
+a:hover{
+    
+    color: @Sword;
+}
+
+.fake-link {
+	cursor: pointer;
+}
